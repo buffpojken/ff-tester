@@ -1,0 +1,16 @@
+<html>
+<head>
+	<title>Filmfunder Login Tester</title>
+</head>
+<body>
+	
+	<form method="post" action="https://filmfunds.staging.qubator.com/api/accounts/<%= @user_data[:username] %>">
+		<input type="submit" value="Create Account" />
+		<input type="hidden" value="<%= @payload %>" name="user_data" />
+		<input type="hidden" value="<%= @user_data[:username] %>" name="username" />		
+		<input type="hidden" value="<%= @signature %>" name="signature" />		
+		<input type="hidden" value="http://localhost:4567/" name="redirect_uri" />		
+	</form>
+	
+</body>
+</html>
